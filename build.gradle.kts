@@ -29,7 +29,7 @@ tasks {
 
 	bootJar {
 		manifest {
-			attributes["Main-Class"] = "net.hyren.web.api.WebAPIApplication"
+			attributes["Start-Class"] = "net.hyren.web.api.WebAPIApplication"
 		}
 
 		val fileName = "${project.name}.jar"
