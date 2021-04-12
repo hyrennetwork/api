@@ -1,4 +1,4 @@
-package net.hyren.web.api.databases.models
+package net.hyren.web.api.applications.http.models
 
 /**
  * @author Gutyerrez

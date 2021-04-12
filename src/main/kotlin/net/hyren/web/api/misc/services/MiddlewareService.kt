@@ -1,4 +1,4 @@
-package net.hyren.web.api.services
+package net.hyren.web.api.misc.services
 
 import net.hyren.web.api.applications.http.middleware.Middleware
 import org.springframework.stereotype.Component
