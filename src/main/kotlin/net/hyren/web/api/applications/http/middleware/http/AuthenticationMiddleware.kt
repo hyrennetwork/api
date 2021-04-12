@@ -1,9 +1,9 @@
-package hyren.net.web.api.applications.http.middleware.http
+package net.hyren.web.api.applications.http.middleware.http
 
-import hyren.net.web.api.APIConstants
-import hyren.net.web.api.applications.http.middleware.Middleware
-import hyren.net.web.api.misc.http.HttpResponse
-import hyren.net.web.api.misc.http.send
+import net.hyren.web.api.APIConstants
+import net.hyren.web.api.applications.http.middleware.Middleware
+import net.hyren.web.api.misc.http.HttpResponse
+import net.hyren.web.api.misc.http.send
 import org.springframework.stereotype.Component
 import javax.servlet.http.HttpServletRequest
 import javax.servlet.http.HttpServletResponse

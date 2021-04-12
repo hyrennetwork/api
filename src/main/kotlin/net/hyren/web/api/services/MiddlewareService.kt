@@ -1,6 +1,6 @@
-package hyren.net.web.api.services
+package net.hyren.web.api.services
 
-import hyren.net.web.api.applications.http.middleware.Middleware
+import net.hyren.web.api.applications.http.middleware.Middleware
 import org.springframework.stereotype.Component
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer

@@ -1,4 +1,4 @@
-package hyren.net.web.api.applications.http.middleware
+package net.hyren.web.api.applications.http.middleware
 
 import org.springframework.web.servlet.AsyncHandlerInterceptor
 import javax.servlet.http.HttpServletRequest

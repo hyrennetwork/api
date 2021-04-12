@@ -1,4 +1,4 @@
-package hyren.net.web.api.misc.http
+package net.hyren.web.api.misc.http
 
 import com.redefantasy.core.shared.CoreConstants
 import org.springframework.http.MediaType

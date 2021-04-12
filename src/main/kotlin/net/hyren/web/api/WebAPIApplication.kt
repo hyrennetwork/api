@@ -1,4 +1,4 @@
-package hyren.net.web.api
+package net.hyren.web.api
 
 import com.redefantasy.core.shared.CoreProvider
 import com.redefantasy.core.shared.applications.ApplicationType

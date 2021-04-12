@@ -1,9 +1,9 @@
-package hyren.net.web.api.applications.http.controller
+package net.hyren.web.api.applications.http.controller
 
 import com.redefantasy.core.shared.CoreProvider
 import com.redefantasy.core.shared.users.passwords.storage.dto.FetchUserPasswordByUserIdDTO
-import hyren.net.web.api.databases.models.Account
-import hyren.net.web.api.misc.http.HttpResponse
+import net.hyren.web.api.databases.models.Account
+import net.hyren.web.api.misc.http.HttpResponse
 import org.springframework.http.MediaType
 import org.springframework.web.bind.annotation.PostMapping
 import org.springframework.web.bind.annotation.RequestBody

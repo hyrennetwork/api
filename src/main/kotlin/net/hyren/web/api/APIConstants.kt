@@ -1,4 +1,4 @@
-package hyren.net.web.api
+package net.hyren.web.api
 
 import com.fasterxml.jackson.annotation.JsonInclude
 import com.redefantasy.core.shared.CoreConstants
