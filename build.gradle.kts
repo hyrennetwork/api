@@ -32,7 +32,7 @@ tasks {
 
 	shadowJar {
 		manifest {
-			attributes["Main-Class"] = "net.hyren.web.api.WebAPIApplicaion"
+			attributes["Main-Class"] = "net.hyren.web.api.WebAPIApplication"
 		}
 
 		val fileName = "${project.name}.jar"
