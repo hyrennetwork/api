@@ -4,6 +4,9 @@ plugins {
 
 	kotlin("jvm") version "1.4.32"
 	kotlin("plugin.spring") version "1.4.31"
+
+	id("maven-publish")
+	id("com.github.johnrengelman.shadow") version "6.1.0"
 }
 
 group = "hyren.net"
@@ -24,6 +27,31 @@ tasks {
 	compileKotlin {
 		kotlinOptions {
 			jvmTarget = "1.8"
+		}
+	}
+
+	shadowJar {
+		manifest {
+			attributes["Main-Class"] = "net.hyren.discord.bot.DiscordBotApplication"
+		}
+
+		val fileName = "${project.name}.jar"
+
+		archiveFileName.set("${project.name}.jar")
+
+		doLast {
+			try {
+				val file = file("build/libs/$fileName")
+
+				val toDelete = file("/home/cloud/output/$fileName")
+
+				if (toDelete.exists()) toDelete.delete()
+
+				file.copyTo(file("/home/cloud/output/$fileName"))
+				file.delete()
+			} catch (ex: java.io.FileNotFoundException) {
+				ex.printStackTrace()
+			}
 		}
 	}
 }
