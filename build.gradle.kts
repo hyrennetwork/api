@@ -4,9 +4,6 @@ plugins {
 
 	kotlin("jvm") version "1.4.32"
 	kotlin("plugin.spring") version "1.4.31"
-
-	id("maven-publish")
-	id("com.github.johnrengelman.shadow") version "6.1.0"
 }
 
 group = "hyren.net"
@@ -30,7 +27,7 @@ tasks {
 		}
 	}
 
-	shadowJar {
+	bootJar {
 		manifest {
 			attributes["Main-Class"] = "net.hyren.web.api.WebAPIApplication"
 		}
