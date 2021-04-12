@@ -32,7 +32,7 @@ tasks {
 
 	shadowJar {
 		manifest {
-			attributes["Main-Class"] = "net.hyren.discord.bot.DiscordBotApplication"
+			attributes["Main-Class"] = "net.hyren.web.api.WebAPIApplicaion"
 		}
 
 		val fileName = "${project.name}.jar"
