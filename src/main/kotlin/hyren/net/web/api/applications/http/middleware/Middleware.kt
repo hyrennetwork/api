@@ -10,8 +10,14 @@ import javax.servlet.http.HttpServletResponse
 interface Middleware : AsyncHandlerInterceptor {
 
 	override fun preHandle(
-		httpServletRequest: HttpServletRequest,
-		httpServletResponse: HttpServletResponse,
+		request: HttpServletRequest,
+		response: HttpServletResponse,
+		handler: Any
+	) = handle(request, response, handler)
+
+	fun handle(
+		request: HttpServletRequest,
+		response: HttpServletResponse,
 		handler: Any
 	): Boolean
 

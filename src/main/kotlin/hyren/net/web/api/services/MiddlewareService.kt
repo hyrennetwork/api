@@ -9,7 +9,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer
  * @author Gutyerrez
  */
 @Component
-class Middleware(
+class MiddlewareService(
 	private vararg val middlewares: Middleware
 ) : WebMvcConfigurer {
 
