@@ -76,7 +76,8 @@ dependencies {
 	implementation("org.influxdb:influxdb-java:2.20")
 
 	// jackson
-	implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
+	implementation("com.fasterxml.jackson.core:jackson-databind:2.12.2")
+	implementation("com.fasterxml.jackson.module:jackson-module-kotlin:2.11.2")
 
 	// eventbus
 	implementation("org.greenrobot:eventbus:3.2.0")
