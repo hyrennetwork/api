@@ -55,38 +55,35 @@ tasks {
 
 dependencies {
 	// kotlin
-	implementation("org.jetbrains.kotlin:kotlin-reflect")
-	implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
+	compileOnly("org.jetbrains.kotlin:kotlin-reflect")
+	compileOnly("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
 
 	// spring-boot
 	implementation("org.springframework.boot:spring-boot-starter-web")
 
 	// commons-lang 3
-	implementation("org.apache.commons:commons-lang3:3.11")
+	compileOnly("org.apache.commons:commons-lang3:3.11")
 
 	// exposed
 	implementation("org.jetbrains.exposed:exposed-dao:0.29.1")
-	implementation("org.jetbrains.exposed:exposed-core:0.29.1")
-	implementation("org.jetbrains.exposed:exposed-jodatime:0.29.1")
+	compileOnly("org.jetbrains.exposed:exposed-core:0.29.1")
+	compileOnly("org.jetbrains.exposed:exposed-jodatime:0.29.1")
 
 	// redis
-	implementation("redis.clients:jedis:3.3.0")
+	compileOnly("redis.clients:jedis:3.3.0")
 
 	// influx db
-	implementation("org.influxdb:influxdb-java:2.20")
+	compileOnly("org.influxdb:influxdb-java:2.20")
 
 	// jackson
-	implementation("com.fasterxml.jackson.core:jackson-core:2.12.2")
-	implementation("com.fasterxml.jackson.core:jackson-databind:2.12.2")
-	implementation("com.fasterxml.jackson.core:jackson-annotations:2.12.2")
-	implementation("com.fasterxml.jackson.datatype:jackson-datatype-guava:2.11.2")
-	implementation("com.fasterxml.jackson.module:jackson-module-kotlin:2.11.2")
+	compileOnly("com.fasterxml.jackson.datatype:jackson-datatype-guava:2.11.2")
+	compileOnly("com.fasterxml.jackson.module:jackson-module-kotlin:2.11.2")
 
 	// eventbus
-	implementation("org.greenrobot:eventbus:3.2.0")
+	compileOnly("org.greenrobot:eventbus:3.2.0")
 
 	// caffeine
-	implementation("com.github.ben-manes.caffeine:caffeine:2.8.5")
+	compileOnly("com.github.ben-manes.caffeine:caffeine:2.8.5")
 
 	// core-shared
 	implementation("com.redefantasy:core-shared:0.1-ALPHA")
