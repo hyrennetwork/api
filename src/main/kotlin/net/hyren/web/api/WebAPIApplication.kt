@@ -33,10 +33,6 @@ class WebAPIApplication {
 			)
 
 			runApplication<WebAPIApplication>()
-
-//			Middleware(
-//				AuthenticationMiddleware()
-//			)
 		}
 
 	}
