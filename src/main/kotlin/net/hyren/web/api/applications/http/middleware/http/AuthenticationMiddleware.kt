@@ -1,8 +1,8 @@
 package net.hyren.web.api.applications.http.middleware.http
 
+import com.redefantasy.core.shared.misc.jackson.builder.JsonBuilder
 import net.hyren.web.api.APIConstants
 import net.hyren.web.api.applications.http.middleware.IMiddleware
-import net.hyren.web.api.misc.http.HttpResponse
 import net.hyren.web.api.misc.http.send
 import org.springframework.stereotype.Component
 import javax.servlet.http.HttpServletRequest
@@ -29,10 +29,11 @@ class AuthenticationMiddleware : IMiddleware {
 
 		return response.send(
 			403,
-			HttpResponse(
-				false,
-				"Acesso negado"
-			)
+			JsonBuilder().append(
+				"success", false
+			).append(
+				"message", "Acesso negado"
+			).build()
 		)
 	}
 
