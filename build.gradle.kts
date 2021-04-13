@@ -78,7 +78,7 @@ dependencies {
 	// jackson
 	compileOnly("com.fasterxml.jackson.datatype:jackson-datatype-guava:2.11.2")
 	compileOnly("com.fasterxml.jackson.module:jackson-module-kotlin:2.11.2")
-	compileOnly("com.fasterxml.jackson.datatype:jackson-datatype-joda:2.11.2")
+	implementation("com.fasterxml.jackson.datatype:jackson-datatype-joda:2.11.2")
 
 	// eventbus
 	compileOnly("org.greenrobot:eventbus:3.2.0")
