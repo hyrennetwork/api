@@ -1,8 +1,8 @@
 package net.hyren.web.api.applications.http.controller
 
-import com.fasterxml.jackson.databind.json.JsonMapper
-import com.fasterxml.jackson.module.kotlin.jsonMapper
+import com.fasterxml.jackson.databind.JsonNode
 import com.redefantasy.core.shared.CoreProvider
+import com.redefantasy.core.shared.misc.jackson.builder.JsonBuilder
 import org.springframework.http.MediaType
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.PathVariable
@@ -24,16 +24,20 @@ class UserController {
 	@GetMapping("/{id}")
 	fun show(
 		@PathVariable id: Any
-	): JsonMapper? {
+	): JsonNode? {
 		val user = when (id) {
 			is String -> CoreProvider.Cache.Local.USERS.provide().fetchByName(id)
 			is UUID -> CoreProvider.Cache.Local.USERS.provide().fetchById(id)
 			else -> null
 		} ?: return null
 
-		return jsonMapper {
-			user.name
-		}
+		return JsonBuilder().append(
+			"id", user.id
+		).append(
+			"name", user.name
+		).append(
+			"created_at", user.createdAt
+		).build()
 	}
 
 }

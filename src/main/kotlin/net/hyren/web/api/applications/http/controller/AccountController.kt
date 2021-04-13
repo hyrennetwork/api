@@ -1,9 +1,10 @@
 package net.hyren.web.api.applications.http.controller
 
+import com.fasterxml.jackson.databind.JsonNode
 import com.redefantasy.core.shared.CoreProvider
+import com.redefantasy.core.shared.misc.jackson.builder.JsonBuilder
 import com.redefantasy.core.shared.users.passwords.storage.dto.FetchUserPasswordByUserIdDTO
 import net.hyren.web.api.applications.http.models.Account
-import net.hyren.web.api.misc.http.HttpResponse
 import org.springframework.http.MediaType
 import org.springframework.web.bind.annotation.PostMapping
 import org.springframework.web.bind.annotation.RequestBody
@@ -24,7 +25,7 @@ class AccountController {
 	@PostMapping()
 	fun authenticate(
 		@RequestBody account: Account
-	): HttpResponse {
+	): JsonNode {
 		val user = CoreProvider.Cache.Local.USERS.provide().fetchByName(
 			account.name
 		)
@@ -35,19 +36,21 @@ class AccountController {
 				.filter { it.enabled }
 				.findFirst()
 				.isPresent
-		) return HttpResponse(
-			false,
-			"Usuário não está registrado."
-		)
+		) return JsonBuilder().append(
+			"success", false
+		).append(
+			"message", "Usuário não está registrado."
+		).build()
 
-		if (!user.attemptLogin(account.password)) return HttpResponse(
-			false,
-			"A senha inserida está incorreta."
-		)
+		if (!user.attemptLogin(account.password)) return JsonBuilder().append(
+			"success", false
+		).append(
+			"message", "A senha inserida está incorreta."
+		).build()
 
-		return HttpResponse(
-			true
-		)
+		return JsonBuilder().append(
+			"success", true
+		).build()
 	}
 
 }
