@@ -16,7 +16,6 @@ import java.util.*
 @RestController
 @RequestMapping(
 	path = [ "/users" ],
-	consumes = [MediaType.APPLICATION_JSON_VALUE],
 	produces = [ MediaType.APPLICATION_JSON_VALUE ]
 )
 class UserController {
