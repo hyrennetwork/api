@@ -76,9 +76,8 @@ dependencies {
 	compileOnly("org.influxdb:influxdb-java:2.20")
 
 	// jackson
-	compileOnly("com.fasterxml.jackson.datatype:jackson-datatype-guava:2.11.2")
-	compileOnly("com.fasterxml.jackson.module:jackson-module-kotlin:2.11.2")
-	implementation("com.fasterxml.jackson.datatype:jackson-datatype-joda:2.11.2")
+	compileOnly("com.fasterxml.jackson.datatype:jackson-datatype-guava:2.12.3")
+	compileOnly("com.fasterxml.jackson.module:jackson-module-kotlin:2.12.3")
 
 	// eventbus
 	compileOnly("org.greenrobot:eventbus:3.2.0")
