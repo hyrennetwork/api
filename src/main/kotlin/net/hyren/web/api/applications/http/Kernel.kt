@@ -17,6 +17,8 @@ class Kernel : WebMvcConfigurer {
 	override fun addCorsMappings(
 		corsRegistry: CorsRegistry
 	) = CORS.forEach {
+		println("Allow CORS $it")
+
 		corsRegistry.addMapping(it)
 	}
 
