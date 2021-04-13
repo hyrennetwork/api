@@ -4,8 +4,8 @@ import com.redefantasy.core.shared.CoreProvider
 import com.redefantasy.core.shared.users.data.User
 import org.springframework.http.MediaType
 import org.springframework.web.bind.annotation.GetMapping
+import org.springframework.web.bind.annotation.PathVariable
 import org.springframework.web.bind.annotation.RequestMapping
-import org.springframework.web.bind.annotation.RequestParam
 import org.springframework.web.bind.annotation.RestController
 import java.util.*
 
@@ -22,7 +22,7 @@ class UserController {
 
 	@GetMapping("/{id}")
 	fun show(
-		@RequestParam id: Any
+		@PathVariable id: Any
 	): User? {
 		return when (id) {
 			is String -> CoreProvider.Cache.Local.USERS.provide().fetchByName(id)
