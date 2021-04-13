@@ -32,7 +32,6 @@ class UserController {
 		} ?: return null
 
 		return jsonMapper {
-			user.id
 			user.name
 		}
 	}
