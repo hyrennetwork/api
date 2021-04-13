@@ -18,8 +18,6 @@ class Kernel : WebMvcConfigurer {
 	override fun addCorsMappings(
 		corsRegistry: CorsRegistry
 	) {
-		println("Allow CORS")
-
 		corsRegistry.addMapping("/**").allowedOrigins(
 			*CORS
 		)
