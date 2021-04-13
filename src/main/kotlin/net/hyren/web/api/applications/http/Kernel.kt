@@ -11,8 +11,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer
 class Kernel : WebMvcConfigurer {
 
 	val CORS = arrayOf(
-		"http://localhost:3000",
-		"http://45.231.209.72:3000"
+		"http://localhost:3000"
 	)
 
 	override fun addCorsMappings(

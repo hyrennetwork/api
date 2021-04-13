@@ -7,7 +7,7 @@ import javax.servlet.http.HttpServletResponse
 /**
  * @author Gutyerrez
  */
-interface Middleware : AsyncHandlerInterceptor {
+interface IMiddleware : AsyncHandlerInterceptor {
 
 	override fun preHandle(
 		request: HttpServletRequest,

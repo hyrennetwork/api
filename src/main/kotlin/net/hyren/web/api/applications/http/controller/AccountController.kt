@@ -15,13 +15,14 @@ import org.springframework.web.bind.annotation.RestController
  */
 @RestController
 @RequestMapping(
+	path = [ "/accounts" ],
 	consumes = [MediaType.APPLICATION_JSON_VALUE],
 	produces = [MediaType.APPLICATION_JSON_VALUE]
 )
 class AccountController {
 
 	@PostMapping(
-		path = ["/accounts"]
+		path = ["/"]
 	)
 	fun authenticate(
 		@RequestBody account: Account
