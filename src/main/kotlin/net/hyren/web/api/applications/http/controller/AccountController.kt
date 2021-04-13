@@ -21,9 +21,7 @@ import org.springframework.web.bind.annotation.RestController
 )
 class AccountController {
 
-	@PostMapping(
-		path = ["/"]
-	)
+	@PostMapping()
 	fun authenticate(
 		@RequestBody account: Account
 	): HttpResponse {
