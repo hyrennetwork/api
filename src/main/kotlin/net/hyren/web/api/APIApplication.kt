@@ -11,7 +11,7 @@ import java.net.InetSocketAddress
  * @author Gutyerrez
  */
 @SpringBootApplication
-class WebAPIApplication {
+class APIApplication {
 
 	companion object {
 
@@ -32,7 +32,7 @@ class WebAPIApplication {
 				)
 			)
 
-			runApplication<WebAPIApplication>()
+			runApplication<APIApplication>()
 		}
 
 	}
