@@ -12,12 +12,16 @@ version = "0.0.1"
 repositories {
 	mavenCentral()
 
-	mavenLocal()
-
 	jcenter()
 
 	maven("https://repo.spring.io/milestone")
 	maven("https://repo.spring.io/snapshot")
+	maven("https://maven.pkg.github.com/hyrendev/nexus/") {
+		credentials {
+			username = System.getenv("MAVEN_USERNAME")
+			password = System.getenv("MAVEN_PASSWORD")
+		}
+	}
 }
 
 tasks {
@@ -32,24 +36,7 @@ tasks {
 			attributes["Start-Class"] = "net.hyren.web.api.WebAPIApplication"
 		}
 
-		val fileName = "${project.name}.jar"
-
 		archiveFileName.set("${project.name}.jar")
-
-		doLast {
-			try {
-				val file = file("build/libs/$fileName")
-
-				val toDelete = file("/home/cloud/output/$fileName")
-
-				if (toDelete.exists()) toDelete.delete()
-
-				file.copyTo(file("/home/cloud/output/$fileName"))
-				file.delete()
-			} catch (ex: java.io.FileNotFoundException) {
-				ex.printStackTrace()
-			}
-		}
 	}
 }
 
