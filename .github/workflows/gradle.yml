@@ -27,7 +27,7 @@ jobs:
           remote: /home/cloud/output/
           files: |
             [
-              "build/libs/factions-framework.jar"
+              "build/libs/api.jar"
             ]
           servers: |
             [
